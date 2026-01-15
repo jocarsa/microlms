@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Micro LMS · Video Library</title>
+  <title>jocarsa | microlms</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="topbar">
-    <div class="brand">Micro LMS</div>
+    <div class="brand">jocarsa | microlms</div>
 
     <div class="search" id="searchBar" hidden>
-      <input id="q" type="search" placeholder="Search videos…" autocomplete="off" />
+      <input id="q" type="search" placeholder="Buscar videos…" autocomplete="off" />
       <div id="meta" class="meta"></div>
     </div>
   </header>
@@ -19,18 +19,19 @@
   <!-- LOGIN VIEW -->
   <main id="authView" class="auth">
     <div class="authCard">
-      <div class="authHead">Login</div>
+      <h1>jocarsa | microlms</h1>
+      <div class="authHead">Inicio de sesión</div>
       <div class="authBody">
         <div class="field">
-          <label for="user">User</label>
+          <label for="user">Usuario</label>
           <input id="user" type="text" autocomplete="username" />
         </div>
         <div class="field">
-          <label for="pass">Password</label>
+          <label for="pass">Contraseña</label>
           <input id="pass" type="password" autocomplete="current-password" />
         </div>
-        <button id="loginBtn" class="btn" type="button">Enter</button>
-        <div id="authErr" class="err" hidden>Invalid credentials.</div>
+        <button id="loginBtn" class="btn" type="button">Entrar</button>
+        <div id="authErr" class="err" hidden>Credenciales inválidas.</div>
       </div>
     </div>
   </main>
@@ -38,7 +39,7 @@
   <!-- APP VIEW -->
   <main id="appView" class="wrap" hidden>
     <section id="grid" class="grid" aria-live="polite"></section>
-    <div id="empty" class="empty" hidden>No videos found.</div>
+    <div id="empty" class="empty" hidden>No hay videos.</div>
   </main>
 
   <!-- Modal -->
