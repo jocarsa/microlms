@@ -261,4 +261,7 @@ body{
   background: #000;
   outline: none;
 }
-
+/* Force native hidden attribute to always work */
+[hidden]{
+  display: none !important;
+}

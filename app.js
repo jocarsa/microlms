@@ -157,15 +157,15 @@ function showAuth(error = false) {
   appView.hidden = true;
   searchBar.hidden = true;
   authErr.hidden = !error;
-  uEl.focus();
 }
 
 function showApp() {
-  authView.hidden = true;
-  appView.hidden = false;
-  searchBar.hidden = false;
+  authView.hidden = true;     // ✅ hides login
+  appView.hidden = false;     // ✅ shows videos
+  searchBar.hidden = false;   // ✅ shows search
   authErr.hidden = true;
 }
+
 
 async function attemptLogin() {
   authErr.hidden = true;
@@ -179,29 +179,39 @@ async function attemptLogin() {
   } catch (e) {
     console.error(e);
     authErr.hidden = false;
-    authErr.textContent = "auth.json missing or not readable.";
+    authErr.textContent = "auth.json missing or not readable (use a local web server).";
     return;
   }
 
-  const ok = inputUser === String(creds.user || "") && inputPass === String(creds.pass || "");
+  const ok =
+    inputUser === String(creds.user || "") &&
+    inputPass === String(creds.pass || "");
+
   if (!ok) {
-    showAuth(true);
+    authErr.hidden = false;
+    authErr.textContent = "Invalid credentials.";
     return;
   }
 
+  // ✅ SUCCESS: hide login FIRST, show app immediately
   localStorage.setItem(SESSION_KEY, "1");
   showApp();
 
+  // Then load videos
   try {
     await loadCatalog();
+    // meta is updated by render(), but keep it safe:
     meta.textContent = `${allVideos.length} / ${allVideos.length}`;
   } catch (e) {
     console.error(e);
+    // Keep app visible, show a clear error message in the app area
     meta.textContent = "Failed to load videos.json";
     empty.hidden = false;
-    empty.textContent = "Could not load videos.json. Use a local web server.";
+    empty.textContent =
+      "Logged in OK, but videos.json could not be loaded. Make sure videos.json exists and you are using http:// (python -m http.server).";
   }
 }
+
 
 function isAuthed() {
   return localStorage.getItem(SESSION_KEY) === "1";
