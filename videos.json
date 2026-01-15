@@ -1,0 +1,53 @@
+{
+  "generated_at_epoch": 1768493804,
+  "videos_dir": "videos",
+  "thumbnails_dir": "thumbnails",
+  "count": 5,
+  "videos": [
+    {
+      "id": "1.-Acceso a la plataforma",
+      "index": 1,
+      "title": "1.-Acceso a la plataforma",
+      "video_file": "videos/1.-Acceso a la plataforma.mp4",
+      "thumbnail_file": "thumbnails/1.-Acceso a la plataforma.webp",
+      "duration_seconds": 43.317,
+      "size_bytes": 2698482
+    },
+    {
+      "id": "2.-Repaso administrador",
+      "index": 2,
+      "title": "2.-Repaso administrador",
+      "video_file": "videos/2.-Repaso administrador.mp4",
+      "thumbnail_file": "thumbnails/2.-Repaso administrador.webp",
+      "duration_seconds": 81.917,
+      "size_bytes": 7088244
+    },
+    {
+      "id": "3.-Crear nuevo usuario",
+      "index": 3,
+      "title": "3.-Crear nuevo usuario",
+      "video_file": "videos/3.-Crear nuevo usuario.mp4",
+      "thumbnail_file": "thumbnails/3.-Crear nuevo usuario.webp",
+      "duration_seconds": 78.167,
+      "size_bytes": 5362630
+    },
+    {
+      "id": "4.-Buscar usuarios",
+      "index": 4,
+      "title": "4.-Buscar usuarios",
+      "video_file": "videos/4.-Buscar usuarios.mp4",
+      "thumbnail_file": "thumbnails/4.-Buscar usuarios.webp",
+      "duration_seconds": 96.7,
+      "size_bytes": 5590799
+    },
+    {
+      "id": "5.-Matricular usuarios",
+      "index": 5,
+      "title": "5.-Matricular usuarios",
+      "video_file": "videos/5.-Matricular usuarios.mp4",
+      "thumbnail_file": "thumbnails/5.-Matricular usuarios.webp",
+      "duration_seconds": 137.617,
+      "size_bytes": 8046550
+    }
+  ]
+}

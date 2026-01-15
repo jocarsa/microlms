@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Micro LMS · Video Library</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">Micro LMS</div>
+
+    <div class="search">
+      <input id="q" type="search" placeholder="Search videos…" autocomplete="off" />
+      <div id="meta" class="meta"></div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section id="grid" class="grid" aria-live="polite"></section>
+    <div id="empty" class="empty" hidden>No videos found.</div>
+  </main>
+
+  <!-- Modal -->
+  <div id="modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal__backdrop" data-close="1"></div>
+
+    <div class="modal__panel" role="document">
+      <button class="modal__close" type="button" title="Close" aria-label="Close" data-close="1">×</button>
+      <div class="modal__title" id="modalTitle"></div>
+
+      <div class="player">
+        <video id="player" controls preload="metadata"></video>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
+
