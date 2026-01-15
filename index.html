@@ -10,13 +10,33 @@
   <header class="topbar">
     <div class="brand">Micro LMS</div>
 
-    <div class="search">
+    <div class="search" id="searchBar" hidden>
       <input id="q" type="search" placeholder="Search videos…" autocomplete="off" />
       <div id="meta" class="meta"></div>
     </div>
   </header>
 
-  <main class="wrap">
+  <!-- LOGIN VIEW -->
+  <main id="authView" class="auth">
+    <div class="authCard">
+      <div class="authHead">Login</div>
+      <div class="authBody">
+        <div class="field">
+          <label for="user">User</label>
+          <input id="user" type="text" autocomplete="username" />
+        </div>
+        <div class="field">
+          <label for="pass">Password</label>
+          <input id="pass" type="password" autocomplete="current-password" />
+        </div>
+        <button id="loginBtn" class="btn" type="button">Enter</button>
+        <div id="authErr" class="err" hidden>Invalid credentials.</div>
+      </div>
+    </div>
+  </main>
+
+  <!-- APP VIEW -->
+  <main id="appView" class="wrap" hidden>
     <section id="grid" class="grid" aria-live="polite"></section>
     <div id="empty" class="empty" hidden>No videos found.</div>
   </main>
